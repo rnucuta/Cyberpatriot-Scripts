@@ -93,7 +93,6 @@ echo "$LogTime uss: [$UserName]# Removing hacking tools..." >> output.log
 	dpkg -l | grep john >> output.log
 	if [ $? -eq 0 ];
 	then
-        	echo "JOHN HAS BEEEN FOUND! DIE DIE DIE"
         	apt-get autoremove -y --purge john >> output.log
         	echo "John has been ripped"
 			sleep 1
@@ -105,7 +104,7 @@ echo "$LogTime uss: [$UserName]# Removing hacking tools..." >> output.log
 	dpkg -l | grep hydra >>output.log
 	if [ $? -eq 0 ];
 	then
-		echo "HEIL HYDRA"
+		echo "Hydra removed"
 		apt-get autoremove -y --purge hydra >> output.log
 	else
 		echo "Hydra has not been found."
@@ -114,7 +113,7 @@ echo "$LogTime uss: [$UserName]# Removing hacking tools..." >> output.log
 	dpkg -l | grep nginx >> output.log
 	if [ $? -eq 0 ];
 	then
-        	echo "NGINX HAS BEEN FOUND! OHHHH NOOOOOO!"
+        	echo "NGINX Removed"
         	apt-get autoremove -y --purge nginx >> output.log
 	else
         	echo "NGINX has not been found"
@@ -219,7 +218,7 @@ echo "$LogTime uss: [$UserName]# Samba has been removed." >> output.log
 	dpkg -l | grep snmp >> output.log
 	if [ $? -eq 0 ]
 	then	
-		echo "SNMP HAS BEEN LOCATED!"
+		echo "SNMP removed!"
 		apt-get autoremove -y --purge snmp
 	else
 		echo "SNMP has not been found."
